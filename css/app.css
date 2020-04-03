@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    color: #fff;
+}
+
+.card {
+    list-style: none;
+    padding: 40px;
+    background-color: #fff;
+    color: #222;
+    border-radius: 12px;
+}
+
+#empresabox {
+    width: 10rem;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.card-img-top {
+    width: 10rem;
+}
+
+.card-title {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.d-flex {
+    margin-left: 10px;
+    height: 40px;
+}

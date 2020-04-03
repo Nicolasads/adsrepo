@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html,body {
+  background: #ffff;
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+  background-color: #7159c1;
+}
+
+.navbar-brand i {
+  font-size: 35px;
+  padding-right: 8px;
+  color: #fff;
+
+}
+
+.navbar-brand a {
+  font-size: 30px;
+  margin-left: 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar-item:hover {
+  text-decoration: none;
+}
+
+.navbar-brand a:hover{
+  color: #fff;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-end a {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+.navbar-end a:hover{
+  background-color: #9a81eead;
+  color: #fff;
+}
+
+.has-dropdown a:hover {
+  color: rgb(53, 53, 53);
+}
+
+.navbar-dropdown {
+  background-color: #7159c1;
+}
+
+.search {
+  background-color: #7159c1;
+  height: 250px;
+}
+
+.control {
+  padding-top: 60px;
+  height: 40px;
+}
+
+.container {
+  padding-top: 30px;
+}
+
+.card {
+  border-radius: 14px;
+}
+
+.content a {
+  color: rgb(53, 53, 53);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.field {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.control input {
+  border-radius: 16px;
+}
+
+.control a {
+  border-radius: 16px;
+}
+
+.rating {
+  padding-top: 20px;
+}
+
+.title {
+  padding-left: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.colum {
+  padding-left: 37rem;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.btn-custom {
+  background-color:#7159c1;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.btn-custom:hover {
+  background-color: #6416bd;
+  transition: .3s;
+  color: #fff;
+}
+
+.btn-custom2 {
+  border-color: #8e009b;
+  color: rgb(119, 119, 119);
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.btn-custom2:hover {
+  background-color: #b02db4;
+  border-color: #b02db4;
+  color: #fff;
+  transition: .3s;
+}
+.modal-content {
+  border-radius: 12px;
+}
+
+.login-form h1 {
+  font-weight: 600;
+}
+
+.form-control {
+    font-size: 16px;
+    min-height: 48px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    transition: .6s;
+    padding-bottom: 20px;
+}
+
+.form-control:focus {
+  border-color: #723dbe;
+  box-shadow: 0 0 0 0.2rem rgba(114, 61, 190, .25);
+  font-size: 13px;
+  transition: .6s;
+}
+
+.forgot-link {
+  font-size: 13px;
+}
+
+.forgot-link label {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login-form a {
+  text-decoration: none;
+  color: #666;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.login-form a:hover {
+  color: #b02db4;
+}
+
+.link-login strong {
+  cursor: pointer;
+  color: #666;
+}
+
+.link-login strong:hover {
+  color: #b02db4;
+}
