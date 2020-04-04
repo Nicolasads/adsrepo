@@ -40,9 +40,9 @@
           <div class="collapse navbar-collapse" id="navbar-toggle">
             <ul class="navbar-nav ml-auto">
               <a href="home.php" class="btn btn-custom btn-lg rounded-pill" role="button">Começar</a>
-              <button type="button" class="btn btn-custom2 rounded-pill" data-toggle="modal" data-target="#exampleModalLong">
+              <a class="btn btn-custom2 rounded-pill" href="login.php">
                 Login
-              </button>
+              </a>
             </ul>
           </div>
         </nav>
@@ -57,79 +57,6 @@
       </div>
     </div>
 
-    <!-------- MODAL LOGIN ------------>
-    <div class="modal" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <!-- Any other Bulma elements you want -->
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <button type="button" class="close mt-3 mr-3 ml-auto" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div class="modal-body">
-            <form class="login-form text-center">
-              <h1 class="mb-5">Olá, Bem-vindo!</h1>
-      
-              <div class="from-group">
-                <input type="text" class="form-control rounded-pill" placeholder="Usuário">
-              </div>
-              <div class="from-group">
-                <input type="password" class="form-control rounded-pill" placeholder="Senha">
-              </div>
-      
-              <div class="forgot-link d-flex align-items-center justify-content-between">
-                <div class="form-check">
-                  <input type="checkbox" id="remember" class="form-check-input">
-                  <label for="remember">Lembrar senha</label>
-                </div>
-                <a href="#">Esqueceu sua senha?</a>
-              </div>
-      
-              <button type="submit" class="btn btn-login btn-custom btn-block btn-lg rounded-pill text-uppercase">Entrar</button>
-              <p class="mt-2">Não tem conta?<a data-toggle="modal" data-target="#modalCadastro" data-dismiss="modal">
-              <strong> Cadastre-se</strong></a></p>
-            </form> 
-          </div>
-            
-        </div>
-      </div>
-    </div>
-
-    <!--MODAL CADASTRO-->
-
-    <div class="modal fade" id="modalCadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <button type="button" class="close mt-3 mr-3 ml-auto" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div class="modal-body">
-              <form class="login-form text-center">
-                <h1 class="mb-5 font-weight-light text-uppercase">Crie sua conta</h1>
-        
-                <div class="from-group">
-                  <input type="text" class="form-control rounded-pill" placeholder="Nome">
-                </div>
-                <div class="from-group">
-                  <input type="text" class="form-control rounded-pill" placeholder="Usuário">
-                </div>
-                <div class="from-group">
-                  <input type="password" class="form-control rounded-pill" placeholder="Senha">
-                </div>
-        
-                <button type="submit" class="btn mt-4 btn-custom btn-block btn-lg rounded-pill text-uppercase">Criar conta</button>
-              </form>
-              <p class="link-login mt-2 text-center">Já tem conta?<a data-toggle="modal" data-target="#exampleModalLong" data-dismiss="modal">
-                <strong> Faça o login</strong></a></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-----------------PÁGINA INICIAL--------------------------->
     <div class="caption text-center">

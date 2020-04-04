@@ -1,9 +1,5 @@
 <?php
-$url = "https://my-json-server.typicode.com/Nicolasads/api-host/empresa"; 
-$ch = curl_init($url); 
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
-$empresas = json_decode(curl_exec($ch));
+    require_once 'emp_db.php';
 ?>
 
 <!DOCTYPE html>
@@ -57,36 +53,25 @@ $empresas = json_decode(curl_exec($ch));
       </div>
     </div>
   </div>
-
+  
     <section class="container">
-      <?php
-      if(count($empresas)) {
-      $i = 0;
-      foreach($empresas as $Empresa) {
-      $i++;
-      ?>
-      <?php if($i % 3 == 1) { ?>
-      <div class="columns features">
-      <?php } ?>
-        <div class="column is-4">
-          <div class="card">
-            <div class="card-image has-text-centered">
-              <figure class="image is-16by9">
-                <img src="<?=$Empresa->image?>" alt="<?=$Empresa->name?>" class="img" data-target="modal-image2">
-              </figure>
-            </div>
-            <div class="card-content has-text-centered">
-              <div class="content">
-                <a class="text-name" href="empresas.php"><?=$Empresa->name?></a>
+    <?php
+        $res=mysqli_query( $link, "SELECT * FROM empresas");
+          while($row=mysqli_fetch_array($res)) 
+          {
+          ?>
+            <div class="card ml-3" style="width: 18rem;">
+              <img class="card-img-top col-sm" src="teste.gif" alt="Card image cap">
+              <div class="card-body">
+                <a class="card-title text-center" href="empresas.php"><?php echo $row["empresa_nome"] ?> -
+                <?php echo $row["empresa_nota"] ?> <i class="fas fa-star"></i>
+              </a>
               </div>
-            </div> 
-          </div>
-        </div>
-      <?php if($i % 3 == 0) { ?>
-      </div>
-      <?php } } } else { ?>
-        <strong>Nenhum resultado retornado pela API</strong>
-      <?php } ?>
+            </div>
+          <?php
+          }
+        ?>
+
     </section>
 
     <script src="https://kit.fontawesome.com/c4cf45b7a7.js" crossorigin="anonymous"></script>

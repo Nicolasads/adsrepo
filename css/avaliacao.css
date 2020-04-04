@@ -68,9 +68,6 @@ html,body {
 
 .container {
   padding-top: 30px;
-  display: grid;
-  grid-row-gap: 50px;
-  grid-template-columns: auto auto auto;
 }
 
 .card-title {
@@ -80,11 +77,7 @@ html,body {
 }
 
 .card-body a{
-  margin-left: 20%;
-}
-
-.card-body i {
-  color: yellow;
+  margin-left: 28%;
 }
 
 .card {
@@ -231,28 +224,6 @@ html,body {
   color: #414141;
 }
 
-.list-group-item a{
-  color: #313131;
-  font-size: 20px;
-}
 
-.list-group-item a:hover {
-  text-decoration: none;
-}
 
-.list-group-item i{
-  color: yellow;
-}
-
-.title_emp {
-  padding-left: 12px;
-  padding-top: 18px;
-  font-size: 25px;
-}
-
-.empresas p {
-  padding-left: 12px;
-  padding-top: 18px;
-  font-size: 16px;
-}
 

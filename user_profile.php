@@ -10,7 +10,9 @@
         if(!isset($_SESSION['logado'])):
             header('Location: index.php');
         endif;
+
     ?>
+
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -27,7 +29,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
-    <link rel="stylesheet" href="./css/home.css" type="text/css" />
+    <link rel="stylesheet" href="./css/avaliacao.css" type="text/css" />
     <!-- Fontes -->
     <link href="https://fonts.googleapis.com/css?family=Caladea|Odibee+Sans|Oxanium|Trade+Winds&display=swap" rel="stylesheet">
 
@@ -45,10 +47,10 @@
 
             <ul class="navbar-nav navbar-end">
               <li class="navbar-item navbar-start">
-                <a class="navbar-item" href="user_home.php">Home</a>
+                <a class="navbar-item" href="user_home.php">Início</a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-item" href="empresas.php">Empresas</a>
+                <a class="navbar-item" href="user_empresas.php">Empresas</a>
               </li>
               <li class="navbar-item">
                 <a class="navbar-item" href="avaliacao.php">Avaliação</a>
@@ -57,14 +59,15 @@
                 <a class="navbar-link">Bem-vindo</a>
                 <div class="navbar-dropdown">
                   <a class="navbar-item" href="user_profile.php">Editar Perfil</a>
-                  <a class="navbar-item" href="php_action/logout.php">Sair</a>
+                  <a class="navbar-item" href="logout.php">Sair</a>
                 </div>
               </li>
             </ul>
         </nav>
 
         <div class="container mt-5">
-            <form class="needs-validation" novalidate>
+          
+            <form class="needs-validation" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-2"></div>
                         <div class="form-group col-md-3">
@@ -76,7 +79,7 @@
                     </div>
                 <div class="form-group col-md-3">
                     <label for="senha">Sobrenome</label>
-                    <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" required>
+                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
                     <div class="invalid-feedback">
                     Preencha o campo "Sobrenome"
                     </div>
@@ -87,14 +90,14 @@
                 <div class="form-group col-md-2"></div>
                 <div class="form-group col-md-5">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    <input type="email" class="form-control" id="email" name="email_usuario"  placeholder="email" required>
                     <div class="invalid-feedback">
                     Preencha o campo "E-mail"
                     </div>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="senha">Password</label>
-                    <input type="password" class="form-control" id="senha" placeholder="Password" required>
+                    <input type="password" class="form-control" id="senha" name="senha_usuario" placeholder="senha" required>
                     <div class="invalid-feedback">
                     Preencha o campo "Password"
                     </div>
@@ -104,15 +107,6 @@
                 <div class="form-row">
                     <div class="form-group col-md-2"></div>
                     <div class="form-group col-md-4">
-                    <label for="Tpessoa">Tipo de Usuário</label>
-                    <select class="form-control" id="Tpessoa" required>
-                        <option>Escolha</option>
-                        <option>Pessoa Física</option>
-                        <option>Pessoa Jurídica</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Preencha o campo "Tipo de Usuário"
-                    </div>
                     </div>
                     <!-- Aqui eu tento colocar uma máscara de número pra celular mas não deu certo.-->
                     <div class="form-group col-md-3">
@@ -126,7 +120,7 @@
                 <div class="row">
                 <div class="col-md-2"></div>    
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" name="update" class="btn btn-primary">Atualizar</button>
                 </div>
                 </div>
             </form>

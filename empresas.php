@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+    require_once 'emp_db.php';
+  ?>
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -34,25 +37,36 @@
 
             <ul class="navbar-nav navbar-end">
               <li class="navbar-item navbar-start">
-                <a class="navbar-item" href="user_home.php">Início</a>
+                <a class="navbar-item" href="home.php">Início</a>
               </li>
               <li class="navbar-item">
                 <a class="navbar-item" href="empresas.php">Empresas</a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-item" href="avaliacao.php">Avaliação</a>
+                <a class="navbar-item" href="login.php">Login</a>
               </li>
-              <li class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">Bem-vindo</a>
-                <div class="navbar-dropdown">
-                  <a class="navbar-item" href="user_profile.php">Editar Perfil</a>
-                  <a class="navbar-item" href="index.html">Sair</a>
-                </div>
               </li>
             </ul>
 
         </nav>
     </header>
+
+    <div class="empresas">
+    <?php
+      $res=mysqli_query( $link, "SELECT * FROM `empresas` ORDER BY `empresas`.`empresa_nome` ASC ");
+        while($row=mysqli_fetch_array($res)) 
+        {
+        ?>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <a class="empresa_txt" href="page.php?id=<?php echo $row["empresa_id"];?>"><?php echo $row["empresa_nome"] ?></a>
+            <p class="card-text"><i class="fas fa-star"></i> <?php echo $row["empresa_nota"] ?></p>
+          </li>
+        <?php
+        }
+       ?>
+      </ul>
+    </div>
 
 
     <!-- Optional JavaScript -->

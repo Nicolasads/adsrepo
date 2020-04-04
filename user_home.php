@@ -11,6 +11,9 @@
             header('Location: index.php');
         endif;
     ?>
+    <?php
+    include 'emp_db.php';
+    ?>
 
   <?php
     $url = "https://my-json-server.typicode.com/Nicolasads/api-host/empresa"; 
@@ -49,7 +52,7 @@
                 <a class="navbar-item" href="user_home.php">Início</a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-item" href="empresas.php">Empresas</a>
+                <a class="navbar-item" href="user_empresas.php">Empresas</a>
               </li>
               <li class="navbar-item">
                 <a class="navbar-item" href="avaliacao.php">Avaliação</a>
@@ -76,6 +79,26 @@
         </div>
       </div>
     </div>
+
+    <section class="container">
+    <?php
+        $res=mysqli_query( $link, "SELECT * FROM empresas");
+          while($row=mysqli_fetch_array($res)) 
+          {
+          ?>
+            <div class="card ml-3" style="width: 18rem;">
+              <img class="card-img-top col-sm" src="teste.gif" alt="Card image cap">
+              <div class="card-body">
+                <a class="card-title text-center" href="user_empresas.php"><?php echo $row["empresa_nome"] ?> -
+                <?php echo $row["empresa_nota"] ?> <i class="fas fa-star"></i>
+                </a>
+              </div>
+            </div>
+          <?php
+          }
+        ?>
+
+    </section>
 
     <script src="https://kit.fontawesome.com/c4cf45b7a7.js" crossorigin="anonymous"></script>
       <script

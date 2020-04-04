@@ -37,13 +37,10 @@
 
             <ul class="navbar-nav navbar-end">
               <li class="navbar-item navbar-start">
-                <a class="navbar-item" href="user_home.php">Início</a>
+                <a class="navbar-item" href="home.php">Início</a>
               </li>
               <li class="navbar-item">
-                <a class="navbar-item" href="user_empresas.php">Empresas</a>
-              </li>
-              <li class="navbar-item">
-                <a class="navbar-item" href="avaliacao.php">Avaliação</a>
+                <a class="navbar-item" href="empresas.php">Empresas</a>
               </li>
               <li class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">Bem-vindo</a>
@@ -54,27 +51,23 @@
               </li>
               </li>
             </ul>
-
         </nav>
     </header>
 
     <div class="empresas">
     <?php
-      $res=mysqli_query( $link, "SELECT * FROM `empresas` ORDER BY `empresas`.`empresa_nome` ASC ");
+        $id =$_GET["id"];
+        $res=mysqli_query( $link, "SELECT * FROM `empresas` WHERE `empresa_id`='$id' ");
         while($row=mysqli_fetch_array($res)) 
         {
         ?>
-          <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <a class="empresa_txt" href="usr_page.php?id=<?php echo $row["empresa_id"];?>"><?php echo $row["empresa_nome"] ?></a>
-            <p class="card-text"><i class="fas fa-star"></i> <?php echo $row["empresa_nota"] ?></p>
-          </li>
+          <h1 class="title_emp"><?php echo $row["empresa_nome"] ?></h1>
+          <p class="subtitle_emp"><?php echo $row["empresa_descricao"]?></p>
         <?php
         }
        ?>
       </ul>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
